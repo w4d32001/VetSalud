@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\OwnerController;
+use App\Http\Controllers\PetController;
+use App\Http\Controllers\SpecieController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +19,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::resource('/owner', OwnerController::class);
+ Route::resource('/pet', PetController::class);
+ Route::resource('/specie', SpecieController::class);
