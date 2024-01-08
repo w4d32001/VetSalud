@@ -17,8 +17,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('layouts.app');
 });
 Route::resource('/owner', OwnerController::class);
- Route::resource('/pet', PetController::class);
- Route::resource('/specie', SpecieController::class);
+Route::resource('/pet', PetController::class);
+Route::resource('/specie', SpecieController::class);
